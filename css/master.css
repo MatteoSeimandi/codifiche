@@ -1,0 +1,288 @@
+/* Parte principale*/
+
+body{
+   font-family: arial;
+}
+
+#main{
+   border-left: 25px solid rgb(60, 238, 169);
+   border-right: 25px solid  rgb(60, 238, 169);
+   width: 70%;
+   margin-left: 13%;
+   padding: 15px;
+   background-color: rgb(233, 252, 255);
+   text-align: center;
+}
+
+h1{
+   color: rgb(16, 139, 166);
+   font-size: 300%;
+}
+
+#indice{
+   border: 3px solid rgb(22, 222, 198);
+   width: 45%;
+   margin-left: 25%;
+   padding: 10px;
+   border-radius: 14px;
+   margin-bottom: 20px;
+   background-color: rgb(237, 255, 250);
+}
+
+a{
+   font-size: 150%;
+   margin: 10px;
+}
+
+#indice h2{
+   margin: 7px;
+}
+
+#intro{
+   border: 3px solid rgb(22, 222, 198);
+   padding: 10px;
+   width: 70%;
+   margin-left: 13%;
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+}
+
+p{
+   font-size: 130%;
+
+}
+
+h2{
+   color: rgb(22, 222, 198);
+}
+
+h3{
+   color: rgb(23, 160, 219);
+}
+
+hr{
+   border: 4px solid rgb(60, 238, 169);
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+ol{
+   font-size: 130%;
+}
+
+ul{
+   font-size: 130%;
+}
+/* Analogico e digitale */
+
+#first{
+   border: 3px solid rgb(22, 222, 198);
+   padding: 10px;
+   margin-top: 20px;
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+
+}
+
+#first p{
+   width: 90%;
+   margin-left: 5%;
+}
+
+#first input{
+   border: 1px solid black;
+   width: 7%;
+   height: 25px;
+   color: black;
+}
+
+/* bitmap e vettoriale */
+
+#immagini{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+
+
+}
+
+#immagini img{
+   width: 50%;
+   height: 50%;
+}
+
+/* Quantizzazione*/
+
+#quantizzazione{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+#quantizzazione img{
+   height: 50%;
+   width: 50%;
+}
+/* colori */
+
+#colori{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+#colori img{
+   width: 50%;
+   width: 50%;
+}
+
+/* dimensione */
+
+#dimensione{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+#dimensione img[alt=risoluzione]{
+   width: 50%;
+   height: 50%;
+}
+
+#dimensione img{
+   width: 20%;
+   height: 20%;
+}
+
+#calcolo{
+   font-size: 130%;
+   float: right;
+   margin-right: 33%;
+   text-align: left;
+   width: 25%;
+}
+
+/* compressione */
+
+#compressione{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+#compressione img{
+   width: 25%;
+   height: 25%;
+}
+
+/*suoni e onde*/
+
+#suoni{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+
+/* campionamento */
+
+#campionamento{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+#campionamento img{
+   width: 50%;
+   height: 50%;
+}
+
+/* peso */
+
+#peso{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+#peso ul{
+   text-align: left;
+   margin-left: 25%;
+}
+
+/* formati di audio*/
+
+#formati{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+/* video */
+
+#video{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+
+}
+
+#video img{
+   height: 40%;
+   width: 40%;
+}
+
+/* dimensione video */
+
+#occupazione{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+/* codec */
+
+#codec{
+   border: 3px solid rgb(22, 222, 198);
+   border-radius: 14px;
+   background-color: rgb(237, 255, 250);
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+/* footer */
+
+footer{
+   height: 130px;
+   background-color: rgb(13, 124, 159);
+   padding: 10px;
+   text-align: center;
+
+}
+
+footer p{
+   font-size: 230%;
+   margin-top: 20px;
+}

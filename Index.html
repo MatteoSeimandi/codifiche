@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Codifiche</title>
+      <link rel="stylesheet" href="css/master.css">
+      <script type="text/javascript" src="js/master.js"></script>
+   </head>
+   <body background="img/sfondo.jpg">
+      <div id="main">
+         <h1>CODIFICHE IMMAGINI SUONI E VIDEO</h1>
+         <div id="indice">
+            <h2>Indice</h2>
+            <a name="indice" href="#immagini">Immagini</a>
+            <a href="#suoni">Suoni</a>
+            <a href="#video">Video</a>
+         </div>
+         <div id="intro">
+            <h2>INTRODUZIONE</h2>
+            <p>
+               Salve a tutti, in questa pagina web vedremo un'introduzione sul mondo analogico e digitale, come possiamo rapresentare
+               immagini e audio nel digitale, il peso e il tipo delle loro informazioni ed infine qualcosina sul concetto di video.
+            </p>
+         </div>
+         <hr>
+         <div id="first">
+            <h2>IL MONDO ANALOGICO E DIGITALE</h2>
+            <p>
+               Quando si sente la parola analogico si vuol dire una grandezza fisica rapresentata da un insieme infinito di valori continui.
+               Per esempio quando dobbiamo misurare la lunghezza della nostra cameretta usiamo un metro e lo mettiamo di fianco al lato da misurare.
+               Per conoscere la lunghezza di quel lato andremo a leggere il numero presente sul metro dove finisce il nostro lato.
+               Invece, se utilizzassimo un distanziomentro laser (anche se non ci conviene), potremmo leggere la lunghezza nel display.
+            </p>
+            <img id="metro" src="img/metroA.jpeg">
+            <p id="ex">Un esempio di misura analogica</p>
+            <input type="button" value="avanti" onclick="avanti()">
+            <p>
+               Qual'é la differenza sostanziale? In una misura analogica abbiamo infiniti valori continui mentre nel digitale abbiamo finiti valori discreti.
+            </p>
+         </div>
+         <hr>
+         <div id="immagini">
+            <a name="immagini"></a>
+            <h2>LE IMMAGINI DIGITALI</h2>
+            <p>
+               Le immagini digitali si dividono in due categorie: le img vettoriali e le img bitmap:
+            </p>
+            <p>
+               Le immagini vettoriali vengono rapresentate da delle funzioni matematiche che ne descrivono i vertici, lati, curve ecc.
+            </p>
+            <img src="img/vettoriale.jpg">
+            <p>
+               le immagini bitmap (chiamate anche raster) sono invece formate da una matrice di punti detti pixel.
+            </p>
+         </div>
+         <div id="quantizzazione">
+            <h2>LA CODIFICA DELLE IMMAGINI</h2>
+            <p>
+               Che valore avranno i nostri pixel dentro un'immagine? Per scoprirlo inizieremmo con qualcosa di semplice,
+               tipo un disegno in bianco e nero. Come prima cosa dividiamo l'immagine in tanti piccoli quadratini, i pixel appunto,
+               mettendoli all'interno di una griglia. Dopodiché diamo un valore (0/1) per ogni quadratino se e' il colore nero supera quello bianco e viceversa.
+            </p>
+            <img src="img/codificaImg.jpeg">
+            <p>
+               Quella che abbiamo creato e' la nostra cosidetta bitmap. La griglia che possiamo creare e' variabile e più sarà fitta
+               più l'immagine sarà originale. D'altronde una bitmpa con più informazioni avrà una dimensione maggiore.
+            </p>
+         </div>
+         <div id="colori">
+            <h2>LA CODIFICA DEI COLORI</h2>
+            <p>
+               Se invece avessimo un'immagine a colori dovremmo utilizzare non solo 0/1 ma una sequenza di bit che codificherà ogni singolo colore.
+               Ma quanti bit dovremmo utilizzare? Proviamo con un esempio. Immaginiamo di dover utilizzare 16 colori.
+               Il numero di bit necessari per identificare 16 numeri sono 4 perché: 2^n = c con n=4 e c=16.
+            </p>
+            <img src="img/profondità.jpg">
+            <p>
+               Il numero di colori utilizzabili in un singolo pixel prende il nome di profondità di colore.
+               Oggi le profondità più utilizzate sono:
+               <ol>
+                  <li>1 bit per il bianco e nero</li>
+                  <li>4 bit per le scale di grigio</li>
+                  <li>8 bit per le sfumature di grigio</li>
+                  <li>24 bit per il true color (colori veri)</li>
+               </ol>
+            </p>
+         </div>
+         <div id="dimensione">
+            <h2>RISOLUZIONE E DIMENSIONE DI UN'IMMAGINE</h2>
+            <h3>Risoluzione</h3>
+            <p>
+               La risoluzione indica la quantità di pixel presenti in una minuscola area (circa 2,54 cm) e
+               di conseguenza più sarà alta più l'immagine sarà nitida.
+            </p>
+            <img src="img/risoluzione.jpg" alt="risoluzione">
+            <h3>Peso dell'immagine</h3>
+            <p>
+               Ora il nostro che bagaglio culturale e' pronto , andiamo calcolare lo spazio effettivo occupato da un'immagine.
+               Facciamo un esempio con quella qua sotto.
+            </p>
+            <img src="img/caso.jpeg" alt="dimensione">
+               <ul id="calcolo">
+                  <li>Risoluzione = 430x323 </li>
+                  <li>Profondità di colore = 24 bit</li>
+                  <li>Peso = 430x323 * 24 / 8 = 416670 byte</li>
+               </ul>
+         </div>
+         <div id="compressione">
+            <h2>COMPRESSIONE E TIPI DI FILE</h2>
+            <p>
+               Le immagini sono memorizzati in specifivi tipi di file (png, jpeg, ecc.) tutti dalle caretteristiche uniche.
+               Però alcuni di questi eseguono anche una compressione sull'immagine. Vediamo quali
+            </p>
+            <h3>Il formato GIF</h3>
+            <img src="img/esempio.gif" alt="">
+            <ol>
+               <li>Questo formato non esegue compressione</li>
+               <li>Utilizza massimo 8 bit per la profondità di colore e supporta l'opacità</li>
+               <li>Molto utilizzato nella img vettoriali</li>
+               <li>Supporto più fotogrammi per creare piccole animazioni</li>
+            </ol>
+            <h3>Il formato jpg</h3>
+            <img src="img/esempio.jpeg">
+            <ol>
+               <li>JPG e JPEGs sono la stessa cosa</li>
+               <li>Questo formato esegue compressione e quindi perdita di qualità del file</li>
+               <li>Profondità di colore supportata: 24 bit ma non supporta l'opacità</li>
+            </ol>
+            <h3>Il formato png</h3>
+            <img src="img/esempio.png">
+            <ol>
+               <li>Esegue compressione senza perdita di dati</li>
+               <li>Supporta fino a 32 bit per i colori e la trasparenza</li>
+               <li>Sono file di grosse dimensioni</li>
+               <li>Si divide in 2 alternative: png 8 e png 24</li>
+               <li>il png 8 e' utlizzato per i colori a 8 bit e assomiglia al GIF</li>
+               <li>il png 24 supporta 24 bit e si affianca al JPEG</li>
+            </ol>
+         </div>
+         <a href="#indice">Torna all'inizio</a>
+         <hr>
+         <div id="suoni">
+            <a name="suoni"></a>
+            <h2>I SUONI E LE ONDE</h2>
+            <p>
+               I suoni nella vita reale sono oscillazioni delle particelle d'aria.
+               Nella fisica essi vengono rapresentati come delle onde che variano ampiezza nel tempo.
+               L'ampiezza e' altezza dell'onda e il periodo e' la distanza fra due creste d'onda, metre la frequenza e' il numero di periodi
+               presenti in us secondo (Hz).
+            </p>
+            <img src="img/onda.gif">
+            <p>
+               L'orecchio umano percepisce esclusivamente i suoni tra i 20 Hz e i 20000 Hz.
+            </p>
+         </div>
+         <div id="campionamento">
+            <h2>CAMPIONAMENTO DEI SUONI</h2>
+            <p>
+               La descizione sui suoni attraverso le onde e' un'informazione continua ed analogica.
+               Per rapresentare i suoni nell'universo digitale occorre trovare una codifica adatta, cioe' la tecnica del campionamento.
+            </p>
+            <img src="img/campionamento.jpg">
+            <ol>
+               <li>Si divide l'onda in tanti frammenti chiamati campioni (campionamento) </li>
+               <li>Il numero di campioni presenti in un secondo e' detto frequenza di campionamento</li>
+               <li>Si assegna un valore a diverse ampiezze dell'onda</li>
+               <li>Ad ogni campione corrisponderà un certo valore d'ampiezza (quantizzazione)</li>
+               <li>Si estraggono i numeri ottenuti e questa sarà la nostra onda digitale</li>
+            </ol>
+            <h3>Che codifica usare?</h3>
+            <p>
+               Ora e facile chiedersi: che frequenza di campionamento devo usare e quanti bit di codifica?
+               Le frequenze più usate sono: 11, 22 e 44 KHz. Le codifiche invece sono: 4, 8, e 16 bit.
+               Per venirci incontro a questo dilemma ci aiuta Nyquist.
+               Infatti il suo teorema dichiara che per riprodurre il segnale originale basta un numero di campioni pari o
+               superiore al doppio della frequenza dell'onda.
+               Visto che la voce umana ha come fr 20000Hz bisognerà campionare a 40000 campioni.
+               Infine, bisogna sempre ricordare che più informazioni regitriamo, più peso occuperà il nostro file
+            </p>
+         </div>
+         <div id="peso">
+            <h2>PESO OCCUPATO DAL FILE</h2>
+            <p>
+               Volendo calcolare 1 minuto di musica in qualità CD, campionata a 16 bit e con 2 canali d'uscita, dovremmo fare:
+            </p>
+            <ul>
+               <li>60 secondi</li>
+               <li>44100 Hz</li>
+               <li>16 bit</li>
+               <li>2 canali</li>
+               <li>Peso = 60 * 44100 * 16 * 2 = 10584000 byte = 10.09 Megabyte</li>
+            </ul>
+         </div>
+         <div id="formati">
+            <h2>I FORMATI D'AUDIO</h2>
+            <h3>Il file .WAV</h3>
+            <p>
+               Sono file i grosse dimensioni poiché registrano molte informazioni sulle onde. Supportano anche voce umana e effetti speciali
+            </p>
+            <h3>Il file Mp3</h3>
+            <p>
+               Il nome deriva da Motion Pictures Experts Groups, una sigla che indentificava un gruppo di ricercatori,
+               intenti a creare una codifica standarcd internazionale per la compressione audio e video.
+               L'obbiettivo di questo algoritmo é di comprimere il più possibile i file , purché la qualità audio/video rimanesse invariata.
+               In pratica l' MPEG eliminava i campioni non percepiti dal nostro orecchio, come le frequenze basse adiacenti a quelle alte.
+            </p>
+            <h3>Il file WMA</h3>
+            <p>
+               E' l'acronimo di windows media audio, un formato di compressione audio ideato da Microsoft per far fronte all'MP3.
+               Esistono più versioni di questo formato. La ver. Pro permette di ascoltare musica ad alta qualità.
+               La ver. lossless invece impedisce una perdita di valore.
+            </p>
+            <h3>Il formato AAC</h3>
+            <p>
+               Acronimo di Adavanced Audio coding. E' un formato che perde valore audio in cambio di file leggeri.
+               E' stato concepito come il successore dell' MP3 ed é diventato molto popolare quando fu adotatto da Apple come algoritmo
+               per iTunes.
+            </p>
+         </div>
+         <a href="#indice">Torna all'inizio</a>
+         <hr>
+         <div id="video">
+            <a name="video"></a>
+            <h2>IL CONCETTO DI VIDEO</h2>
+            <p>
+               Un concetto di video primitivo non esiste. Il video nasce come un'unione tra sequenze di immagini e audio.
+               Le immagini e i suoni vengono codificati come visto prima. L'occhio umano non riesce a distingueredue immagini diverse ad una certa velocità.
+               Questa velocità corrisponde a 24 fps, dove fps = fotogrammi per secondo.
+            </p>
+            <img src="img/video.jpeg" >
+         </div>
+         <div id="occupazione">
+            <h2>DIMENSIONE E FORMATI FILE</h2>
+            <h3>Dimensione di un video</h3>
+            <p>
+               Se voglio ottenere il peso di un file video devo solo unire la dimensione delle immagini a quella dell'audio. Se facessimo così Però
+               otterremo risultati eccessivi i video di lunga durata verrebbero troppo pesanti. Per eliminare dati inutili si e' deciso,
+               in fase di compressione di caricare solo la parte del fotogramma differente da quello precedente.
+            </p>
+            <img src="img/compressione.jpeg" alt="compressione">
+            <h3>iL FORMATO MP4</h3>
+            <p>
+               Lo standard attualmente più famoso e' l'MP4 ed e' utilizzato per tv, internet, streaming, ecc.
+            </p>
+         </div>
+         <div id="codec">
+            <h2>CONTAINER E CODEC</h2>
+            <p>
+               Il container e' la parte del file video che contiene l'audio e il video. Inoltre definisce l'estensione file.
+               I più famosi sono l'AVI e l'MP4.
+            </p>
+            <p>
+               Il codec e' l'algoritmo di compressione per udio e video.
+               I più famosi sono: H.264 (MP4), WMV(Microsoft), VP9(Youtube).
+            </p>
+         </div>
+         <a href="#indice">Torna all'inizio</a>
+      </div>
+      <hr>
+      <footer>
+         <p>
+            Powered by @666mandi, My GitHub Profile
+         </p>
+         No copyright | No agency | 2020
+      </footer>
+   </body>
+</html>
